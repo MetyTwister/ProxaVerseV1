@@ -1,2 +1,2 @@
 # ProxaVerseV1
-First bigger project.
+First bigger project including application and web.
