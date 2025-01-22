@@ -1,2 +1,2 @@
 # ProxaVerseV1
-First bigger project including application and web..
+Basics of CTkinter python library, MEANT FOR FURTHER DEVELOPMENT!
