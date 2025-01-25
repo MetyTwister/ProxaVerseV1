@@ -1,5 +1,5 @@
-import tkinter as tk
-import customtkinter as ctk
+#import tkinter as tk
+#import customtkinter as ctk
 import subprocess
 import time
 import getpass
@@ -9,13 +9,16 @@ import os
 from multiprocessing import Process
 import requests
 
+#For windows use hashed alternatives ex. (os.system("clear")).
+
 def genName():
     response = requests.get("https://randomuser.me/api")
 
     first_name = response.json()["results"][0]["name"]["first"]
     last_name = response.json()["results"][0]["name"]["last"]
 
-    os.system("cls")
+    os.system("clear")
+    #os.system("cls")
 
     print(first_name + " " + last_name)
 
@@ -23,7 +26,8 @@ def genName():
     #l.config(font =("Courier", 14))
     #l.pack()
 
-os.system("cls")
+os.system("clear")
+#os.system("cls")
 
 print("     ____                            _    __                       _    __ ___")
 print("    / __ \ _____ ____   _  __ ____ _| |  / /___   _____ _____ ___ | |  / /<  /")
@@ -45,13 +49,15 @@ else:
     print("Access Granted!")
     print("")
     time.sleep(0.5)
-    os.system("cls")
+    os.system("clear")
+    #os.system("cls")
 
     while True:
         print("ProxaVerse Terminal - Type help to list all available commands")
         InputMode = input("")
         if InputMode == "ter":
-            os.system("cls")
+            os.system("clear")
+            #os.system("cls")
             time.sleep(1)
             print("Type gen to generate a random name or exit to quit the app!")
 
@@ -65,17 +71,22 @@ else:
                     print("exit - Quit the application")
                     print("help - List all available commands")
                 elif user_input == "exit":
-                    os.system("cls")
+                    os.system("clear")
+                    #os.system("cls")
                     break
                 else:
+                    os.system("clear")
+                    #os.system("cls")
                     print("Unknown command, try help to list all commands!")
 
         elif InputMode == "gui":
-            subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo"], start_new_session=True)
+            subprocess.Popen(["python3", "/Users/miroslavbaloun/Documents/Matyho/ProxaVerseV1-main/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
+            #subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo"], start_new_session=True)
             sys.exit("EX1")
 
         elif InputMode == "exit":
-            os.system("cls")
+            os.system("clear")
+            #os.system("cls")
             print("Are you sure you want to exit? (yes/no)")
             exit_conf = input("")
             while True:
@@ -84,7 +95,8 @@ else:
                 else:
                     break
         elif InputMode == "help":
-            os.system("cls")
+            os.system("clear")
+            #os.system("cls")
             print("gui - View app in GUI")
             print("ter - View app in terminal")
             print("exit - Quit the application")
@@ -92,7 +104,8 @@ else:
             print("")
 
         else:
-            os.system("cls")
+            os.system("clear")
+            #os.system("cls")
             print("Invalid command!")
             print("")
         
