@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<list xmlns="http://seznam.gov.cz/ovm/datafile/seznam_ds/v1" source-system="https://www.mojedatovaschranka.cz/sds">
+    <box>
+        <id>gpc3ceb</id>
+        <type>FO</type>
+        <subtype>40</subtype>
+        <name>
+            <person>
+                <firstName>Jonas</firstName>
+                <lastName>Aafjes</lastName>
+            </person>
+            <tradeName></tradeName>
+        </name>
+        <ico></ico>
+        <address>
+            <city>Svárov</city>
+            <district>Svárov</district>
+            <street>K Podkozí</street>
+            <cp>16</cp>
+            <co></co>
+            <ce></ce>
+            <zip>27351</zip>
+            <addressPoint>1379186</addressPoint>
+            <state>CZ</state>
+            <fullAddress></fullAddress>
+        </address>
+        <pdz>true</pdz>
+        <ovm>false</ovm>
+        <hierarchy>
+            <isMaster>true</isMaster>
+        </hierarchy>
+        <idOVM></idOVM>
+    </box>
