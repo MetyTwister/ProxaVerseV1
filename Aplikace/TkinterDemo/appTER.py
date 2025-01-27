@@ -8,8 +8,9 @@ import tkinter.messagebox
 import os
 from multiprocessing import Process
 import requests
+import xml.etree.ElementTree as ET
 
-#For windows use hashed alternatives ex. (os.system("clear")).
+#For windows use hashed alternatives ex. os.system("clear").
 
 def genName():
     response = requests.get("https://randomuser.me/api")
@@ -17,8 +18,8 @@ def genName():
     first_name = response.json()["results"][0]["name"]["first"]
     last_name = response.json()["results"][0]["name"]["last"]
 
-    os.system("clear")
-    #os.system("cls")
+    #os.system("clear")
+    os.system("cls")
 
     print(first_name + " " + last_name)
 
@@ -26,8 +27,8 @@ def genName():
     #l.config(font =("Courier", 14))
     #l.pack()
 
-os.system("clear")
-#os.system("cls")
+#os.system("clear")
+os.system("cls")
 
 print("     ____                            _    __                       _    __ ___")
 print("    / __ \ _____ ____   _  __ ____ _| |  / /___   _____ _____ ___ | |  / /<  /")
@@ -49,15 +50,15 @@ else:
     print("Access Granted!")
     print("")
     time.sleep(0.5)
-    os.system("clear")
-    #os.system("cls")
+    #os.system("clear")
+    os.system("cls")
 
     while True:
         print("ProxaVerse Terminal - Type help to list all available commands")
         InputMode = input("")
         if InputMode == "ter":
-            os.system("clear")
-            #os.system("cls")
+            #os.system("clear")
+            os.system("cls")
             time.sleep(1)
             print("Type gen to generate a random name or exit to quit the app!")
 
@@ -71,22 +72,32 @@ else:
                     print("exit - Quit the application")
                     print("help - List all available commands")
                 elif user_input == "exit":
-                    os.system("clear")
-                    #os.system("cls")
+                    #os.system("clear")
+                    os.system("cls")
                     break
                 else:
-                    os.system("clear")
-                    #os.system("cls")
+                    #os.system("clear")
+                    os.system("cls")
                     print("Unknown command, try help to list all commands!")
 
+        elif InputMode == "xml":
+                    #nefunguje
+                    tree = ET.parse("xmlTest.xml")
+                    root = tree.getroot()
+ 
+                    for person in root.findall('miroslav'):
+                        first_name = person.find('title').text
+                        last_name = person.find('author').text
+                        print(f"First name: {first_name}, Last name: {last_name}")
+
         elif InputMode == "gui":
-            subprocess.Popen(["python3", "/Users/miroslavbaloun/Documents/Matyho/ProxaVerseV1-main/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
-            #subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo"], start_new_session=True)
+            #subprocess.Popen(["python3", "/Users/miroslavbaloun/Documents/Matyho/ProxaVerseV1-main/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
+            subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo"], start_new_session=True)
             sys.exit("EX1")
 
         elif InputMode == "exit":
-            os.system("clear")
-            #os.system("cls")
+            #os.system("clear")
+            os.system("cls")
             print("Are you sure you want to exit? (yes/no)")
             exit_conf = input("")
             while True:
@@ -95,8 +106,8 @@ else:
                 else:
                     break
         elif InputMode == "help":
-            os.system("clear")
-            #os.system("cls")
+            #os.system("clear")
+            os.system("cls")
             print("gui - View app in GUI")
             print("ter - View app in terminal")
             print("exit - Quit the application")
@@ -104,8 +115,8 @@ else:
             print("")
 
         else:
-            os.system("clear")
-            #os.system("cls")
+            #os.system("clear")
+            os.system("cls")
             print("Invalid command!")
             print("")
         
