@@ -56,7 +56,7 @@ else:
     while True:
         print("ProxaVerse Terminal - Type help to list all available commands")
         InputMode = input("")
-        if InputMode == "ter":
+        if InputMode == "genName":
             #os.system("clear")
             os.system("cls")
             time.sleep(1)
@@ -120,15 +120,16 @@ else:
         elif InputMode == "help":
             #os.system("clear")
             os.system("cls")
-            print("gui - View app in GUI")
-            print("ter - View app in terminal")
+            print("gui - Continue with graphical interface")
+            print("genName - Start genName app")
             print("exit - Quit the application")
             print("help - List all available commands")
+            print("xml - Start xml reader")
             print("")
 
         else:
             #os.system("clear")
             os.system("cls")
-            print("Invalid command!")
+            print("Unknown command, try help to list all commands!")
             print("")
         
