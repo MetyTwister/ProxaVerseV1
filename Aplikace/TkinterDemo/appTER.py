@@ -81,14 +81,26 @@ else:
                     print("Unknown command, try help to list all commands!")
 
         elif InputMode == "xml":
-                    #nefunguje
-                    tree = ET.parse("xmlTest.xml")
-                    root = tree.getroot()
- 
-                    for person in root.findall('miroslav'):
-                        first_name = person.find('title').text
-                        last_name = person.find('author').text
-                        print(f"First name: {first_name}, Last name: {last_name}")
+                    while
+                        #os.system("clear")
+                        os.system("cls")
+                        print("Type read to read an xml file")
+                        user_input = input("")
+                        print("")
+                        if user_input == "read":
+                            #nefunguje
+                            tree = ET.parse("xmlTest.xml")
+                            root = tree.getroot()
+         
+                            for person in root.findall('person'):
+                                first_name = person.find('firstName').text
+                                last_name = person.find('lastName').text
+                                print(f"First name: {first_name}, Last name: {last_name}")                             
+                        elif user_input == "exit":
+                            break
+                        else:
+                            print("Unknown command!")
+                        
 
         elif InputMode == "gui":
             #subprocess.Popen(["python3", "/Users/miroslavbaloun/Documents/Matyho/ProxaVerseV1-main/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
