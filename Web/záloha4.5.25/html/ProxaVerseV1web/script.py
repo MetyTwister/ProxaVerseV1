@@ -10,12 +10,14 @@ CORS(app)
 def login():
     password = request.form.get('password')
     
+    # Perform password validation
     if password == "user":
         response = {'message': 'Correct'}
         return jsonify(response), 200
-    else:
-        response = {'message': 'Incorrect'}
-        return jsonify(response), 400
+    
+    # Password is valid
+    response = {'message': 'Incorrect'}
+    return jsonify(response), 400
 
 if __name__ == '__main__':
     app.run()

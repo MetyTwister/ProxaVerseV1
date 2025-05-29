@@ -1,53 +1,184 @@
-body {
-    background-image: url(images/Triangle-backround.jpeg);
-    font-family: Arial, Helvetica, sans-serif;
+html, body {
+    scroll-behavior: smooth;
+    background-image: url(images/purplish3.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.divmain {
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
-    margin-top: 60px;
-    background-color: rgb(75, 75, 75);
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 5px;
-}
 
 header {
-    padding: 5px;
+    width: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    background: rgb(75, 75, 75);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 24%;
+    padding-right: 24%;
+    background: rgb(3, 3, 10);
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: rgb(94, 94, 94);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
 }
 
-footer {
-    padding: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: rgb(75, 75, 75);
+.div1 {
+    color: #f8fbf8;
+    margin-left: 24%;
+    margin-right: 24%;
+    padding-top: 50px;
+    background-color: rgb(75, 75, 75, 0);
+    display: inline;
+    text-align: center;
+}
+
+.divmain {
+    color: #f8fbf8;
+    padding: 10px;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(19, 19, 19, 0);
+    padding: 25px;
+
+}
+
+h2 {
+    font-family: ChakraLight;
+}
+
+h1 {
+    font-family: ChakraBold;
+}
+.divabout {
+    color: #f8fbf8;
+    padding: 10px;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(19, 19, 19, 0);
+    padding: 100px;
+    height: 1500px;
+
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+
+.loginButton {
+    cursor:pointer;
+    transition-duration: 0.3s;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f8fbf8;
+    border-width: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 6px 12px;
+    font-family: Helvetica;
+    margin-right: 3px;
+}
+
+.loginButton:hover {
+    background-color: #f8fbf8;
+    color: black;
+}
+
+.remoteButton {
+    cursor:pointer;
+    transition-duration: 0.3s;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f8fbf8;
+    border-width: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 6px 12px;
+    font-family: Helvetica;
+    margin-left: 3px;
+}
+
+.remoteButton:hover {
+    background-color: #f8fbf8;
+    color: black;
 }
 
 a {
     text-decoration: none;
-    color: rgb(0, 173, 255);
+    color: #0067FF;
+}
+
+footer {
+    color: #f8fbf8;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(3, 3, 10);
+    border-style: solid;
+    border-bottom: 0px;
+    border-top-width: 2px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: rgb(94, 94, 94);
+    display: flex;
+    
 }
 
 @font-face {
     font-family: Quantico;
-    src: url(Quantico-BoldItalic.ttf);
+    src: url(fonts/Quantico-BoldItalic.ttf);
   }
 
-.text1 {
-    border-style: solid;
-    border-top-color: rgb(75, 75, 75);
-    border-left-color: rgb(75, 75, 75);
-    border-right-color: rgb(75, 75, 75);
-    border-bottom-color: black;
+@font-face {
+    font-family: ChakraBoldItalic;
+    src: url(fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: ChakraRegular;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+}
+
+@font-face {
+    font-family: ChakraBold;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Bold.ttf);
+}
+
+@font-face {
+    font-family: ChakraLight;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Light.ttf);
 }

@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(images/backg.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.divmain {
+    font-family: Comforta;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    margin-top: 60px;
+    background-color: rgb(75, 75, 75);
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 5px;
+}
+
+header {
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgb(75, 75, 75);
+}
+
+footer {
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(75, 75, 75);
+}
+
+a {
+    font-family: Comforta;
+    text-decoration: none;
+    color: rgb(0, 173, 255);
+}
+
+@font-face {
+    font-family: Quantico;
+    src: url(Quantico-BoldItalic.ttf);
+  }
+
+@font-face {
+    font-family: Comforta;
+    src: url(Comfortaa-VariableFont_wght.ttf);
+}
+
+.text1 {
+    border-style: solid;
+    border-top-color: rgb(75, 75, 75);
+    border-left-color: rgb(75, 75, 75);
+    border-right-color: rgb(75, 75, 75);
+    border-bottom-color: black;
+}
