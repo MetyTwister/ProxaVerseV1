@@ -158,6 +158,12 @@ footer {
     
 }
 
+.login {
+    text-align: center;
+    size: 35px;
+  }
+
+
 @font-face {
     font-family: Quantico;
     src: url(fonts/Quantico-BoldItalic.ttf);
