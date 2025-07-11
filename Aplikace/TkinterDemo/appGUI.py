@@ -17,8 +17,8 @@ root.title("ProxaVerseV1")
 #Velikost a pozice okna-->
 #root.resizable(False, False)
 
-window_width = 750
-window_height = 500
+window_width = 1000
+window_height = 700
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -32,7 +32,8 @@ root.geometry(f"{window_width}x{window_height}+{center_x}+{center_y}")
 
 #Tlačítko a funkce-->
 def StartApp():
-     subprocess.call("/Applications/Python 3.12/IDLE.app/Contents/MacOS/IDLE")
+    subprocess.call("C:/Users/Maty/FanControl/FanControl.exe")
+    #subprocess.call("/Applications/Python 3.12/IDLE.app/Contents/MacOS/IDLE")
 
 def ExitApp():
     out = tk.messagebox.askquestion('Prompt', 'Do you want to exit now?')

@@ -56,7 +56,7 @@ else:
     while True:
         print("ProxaVerse Terminal - Type help to list all available commands")
         InputMode = input("")
-        if InputMode == "genName":
+        if InputMode == "ter":
             #os.system("clear")
             os.system("cls")
             time.sleep(1)
@@ -81,30 +81,19 @@ else:
                     print("Unknown command, try help to list all commands!")
 
         elif InputMode == "xml":
-                    while
-                        #os.system("clear")
-                        os.system("cls")
-                        print("Type read to read an xml file")
-                        user_input = input("")
-                        print("")
-                        if user_input == "read":
-                            #nefunguje
-                            tree = ET.parse("xmlTest.xml")
-                            root = tree.getroot()
-         
-                            for person in root.findall('person'):
-                                first_name = person.find('firstName').text
-                                last_name = person.find('lastName').text
-                                print(f"First name: {first_name}, Last name: {last_name}")                             
-                        elif user_input == "exit":
-                            break
-                        else:
-                            print("Unknown command!")
-                        
+                    #nefunguje
+                    tree = ET.parse("xmlTest.xml")
+                    root = tree.getroot()
+ 
+                    for person in root.findall('Jonas'):
+                        first_name = person.find('title').text
+                        last_name = person.find('author').text
+                        print(f"First name: {first_name}, Last name: {last_name}")
 
         elif InputMode == "gui":
             #subprocess.Popen(["python3", "/Users/miroslavbaloun/Documents/Matyho/ProxaVerseV1-main/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
-            subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo"], start_new_session=True)
+            subprocess.Popen(["python3", "C:/Users/Maty/Desktop/MATYHO/Pocitace/ProxaVerseV1/Aplikace/TkinterDemo/appGUI.py"], start_new_session=True)
+            time.sleep(0.5)
             sys.exit("EX1")
 
         elif InputMode == "exit":
@@ -120,16 +109,15 @@ else:
         elif InputMode == "help":
             #os.system("clear")
             os.system("cls")
-            print("gui - Continue with graphical interface")
-            print("genName - Start genName app")
+            print("gui - View app in GUI")
+            print("ter - View app in terminal")
             print("exit - Quit the application")
             print("help - List all available commands")
-            print("xml - Start xml reader")
             print("")
 
         else:
             #os.system("clear")
             os.system("cls")
-            print("Unknown command, try help to list all commands!")
+            print("Invalid command!")
             print("")
         
