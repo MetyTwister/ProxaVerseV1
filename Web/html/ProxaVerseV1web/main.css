@@ -1,0 +1,308 @@
+html, body {
+    scroll-behavior: smooth;
+    background-image: url(images/purplish3.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+header {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 24%;
+    padding-right: 24%;
+    background: rgb(3, 3, 10);
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: rgb(94, 94, 94);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 10;
+
+}
+
+.div1 {
+    color: #f8fbf8;
+    margin-left: 24%;
+    margin-right: 24%;
+    padding-top: 50px;
+    background-color: rgb(75, 75, 75, 0);
+    display: inline;
+    text-align: center;
+}
+
+.divmain {
+    color: #f8fbf8;
+    padding: 10px;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(19, 19, 19, 0);
+    padding: 25px;
+
+}
+
+.flexBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;  
+    appearance: none;
+    width: 500px;
+    height: 500px;
+    margin: 25px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 30px;
+    border-color: rgb(75, 75, 75, 0);
+    transition: transform .15s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.tileBackground {
+    margin-left: 50px;
+    margin-bottom: 70px;
+    perspective: 1000px;
+}
+
+.tileBackground img {
+    width: 400px;
+    transform: rotateY(40deg) rotateX(30deg); ;
+    box-shadow: 0 20px 60px rgb(19, 19, 19, 0.6);
+    border-radius: 10px;
+    -webkit-mask-image: radial-gradient(circle at bottom right, rgba(0,0,0,0), rgba(0,0,0,1));
+    mask-image: radial-gradient(circle at bottom right, rgba(0,0,0,0), rgba(0,0,0,1));
+}
+
+.box:hover {
+    transform: scale(1.05);
+    z-index: 8;
+}
+
+.box > h2 {
+    font-weight: 300;
+    font-family: Helvetica;
+    color: white;
+    margin: 30px;
+    font-size: 35px;
+    align-self: flex-start;
+}
+
+.dialog1::backdrop, .dialog2::backdrop {
+    background-color: rgb(19, 19, 19, 0.6);
+}
+
+.dialog1, .dialog2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    color: white;
+    font-family: Helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    width: 65vw;
+    height: 80vh;
+    background-color: rgb(3, 3, 10);
+    border-style: solid;
+    border-radius: 30px;
+    border-color: rgb(94, 94, 94);
+    border-width: 2px;
+}
+
+.dialog1, .dialog2 > p {
+    font-size: 40px;
+}
+
+.dialog1:not([open]) {
+    display: none;
+}
+
+.dialog2:not([open]) {
+    display: none;
+}
+
+.innerDialog1 {
+    width: 90%;
+    height: 90%;
+    padding: 25px;
+    color: white;
+    font-family: Helvetica;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.videoFPV {
+    width: 100%;
+}
+
+h2 {
+    font-family: ChakraLight;
+}
+
+h1 {
+    font-family: ChakraBold;
+}
+.divabout {
+    color: #f8fbf8;
+    padding: 10px;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(19, 19, 19, 0);
+    padding: 100px;
+    height: 1500px;
+
+}
+
+.divpv, .divfpv {
+    color: #f8fbf8;
+    padding: 10px;
+    margin-left: 24%;
+    margin-right: 24%;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(19, 19, 19, 0.6);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(19, 19, 19, 0);
+    padding: 100px;
+    height: 1500px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+
+.headerButton {
+    cursor:pointer;
+    transition-duration: 0.2s;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #f8fbf8;
+    border-width: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 6px 12px;
+    font-family: Helvetica;
+    margin-right: 3px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.headerButton:hover {
+    background-color: #f8fbf8;
+    color: black;
+}
+
+.learnMoreButton {
+    cursor:pointer;
+    transition-duration: 0.2s;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #00a2ff;
+    border-width: 2px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: #00a2ff;
+    text-align: center;
+    padding: 6px 12px;
+    font-family: Helvetica;
+    margin-right: 3px;
+    margin: 5px;
+}
+
+.learnMoreButton:hover {
+    background-color: #00a2ff;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #0067FF;
+}
+
+footer {
+    color: #f8fbf8;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(3, 3, 10);
+    border-style: solid;
+    border-bottom: 0px;
+    border-top-width: 2px;
+    border-right: 0px;
+    border-left: 0px;
+    border-color: rgb(94, 94, 94);
+    display: flex;
+    
+}
+
+.login {
+    text-align: center;
+    size: 35px;
+  }
+
+@font-face {
+    font-family: ChakraBoldItalic;
+    src: url(fonts/Chakra_Petch/ChakraPetch-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: ChakraRegular;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Regular.ttf);
+}
+
+@font-face {
+    font-family: ChakraBold;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Bold.ttf);
+}
+
+@font-face {
+    font-family: ChakraLight;
+    src: url(fonts/Chakra_Petch/ChakraPetch-Light.ttf);
+}

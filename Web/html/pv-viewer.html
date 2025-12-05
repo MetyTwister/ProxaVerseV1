@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>ProxaVerse V1</title>
+        <link rel="stylesheet" href="ProxaVerseV1web/viewer.css">
+        <script defer src="ProxaVerseV1web/viewer.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <a id="PVeffect" data-value="ProxaVerse" href="index.html" style="font-family: ChakraBoldItalic; font-size: 30px;color: #f8fbf8;">ProxaVerse</a>
+            <div>
+                <a href="admin.html">
+                    <button class="headerButton">Admin Panel</button>
+                </a>
+                <a href="https://remote.proxaverse.org" target="_blank">
+                    <button class="headerButton">Remote access</button>
+                </a>
+                <a href="pv-viewer.html" target="_blank">
+                    <button class="headerButton">PV Explorer</button>
+                </a>
+            </div>
+        </header>
+
+        <div id="loader">
+            <div class="loader">
+
+            </div>
+        </div>
+
+        <model-viewer id="viewer"
+                      src="ProxaVerseV1web/models/porsche_gt3_rs.glb"
+                      alt="Moje 3D scéna" 
+                      auto-rotate 
+                      camera-controls 
+                      shadow-intensity="1">
+        </model-viewer>
+         
+    </body>
+</html>
